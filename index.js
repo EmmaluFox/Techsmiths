@@ -13,16 +13,18 @@ const response2 = readline.questionInt();
       answer = (result + response2);
       break;
     case '*':
-      text = "I am not a fan of orange.";
+        answer = (result * response2);
       break;
     case '-':
-      text = "How you like them apples?";
+        answer = (result - response2);
       break;
       case '/':
         answer = (result / response2);
         break;
     default:
-        console.log('Error!');
+        answer = console.log('Error!');
   }
-
-console.log(result +sign +response2 +' equals ' +answer +'. Clever me!');
+if (answer == undefined) {
+    console.log('Try following instructions next time!')
+} else {
+console.log(result +sign +response2 +' equals ' +answer +'. Clever me!');}
