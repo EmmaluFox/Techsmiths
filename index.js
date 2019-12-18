@@ -6,15 +6,23 @@ console.log('Pick a number, any number');
 const result = readline.questionInt();
 console.log('Pick another number, I love numbers!');
 const response2 = readline.questionInt();
-if (sign == '+') {
-    var answer = ((result) + (response2));
-  } else if (sign == '*') {
-    var answer = ((result) * (response2));
-  } else if (sign == '-') {
-    var answer = ((result) - (response2));
-  } else if (sign == '/') {
-    var answer = ((result) / (response2));
-  } else {
-      console.log('Error!')
+  var answer;
+  
+  switch(sign) {
+    case '+':
+      answer = (result + response2);
+      break;
+    case '*':
+      text = "I am not a fan of orange.";
+      break;
+    case '-':
+      text = "How you like them apples?";
+      break;
+      case '/':
+        answer = (result / response2);
+        break;
+    default:
+        console.log('Error!');
   }
+
 console.log(result +sign +response2 +' equals ' +answer +'. Clever me!');
