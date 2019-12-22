@@ -1,29 +1,40 @@
 const readline = require('readline-sync');
-console.log('Hello! Lets do some mathematics!');
 
+function greeting() {
+console.log('Hello! Lets do some mathematics!');
+}
+
+function num(numb) {
+  this.numb = +numb;
+}
+
+greeting();
 
 console.log('Pick an operator:');
 const sign = readline.keyIn('+  - / or  *: ', {limit: '+-*/'}); //Limits user input to operators +, -, / & *
+
+
 console.log('Pick a number, any number');
-const result = readline.questionInt();
+var mynumb = new num(readline.questionInt());
 console.log('Pick another number, I love numbers!');
-const response2 = readline.questionInt();
+var mynumb2 = new num(readline.questionInt());
+
 
 var answer;
 //Applies the chosen operator
   
   switch(sign) {
     case '+':
-      answer = (result + response2);
+      answer = (mynumb.numb + mynumb2.numb);
       break;
     case '*':
-        answer = (result * response2);
+        answer = (mynumb.numb * mynumb2.numb);
       break;
     case '-':
-        answer = (result - response2);
+        answer = (mynumb.numb - mynumb2.numb);
       break;
       case '/':
-        answer = (result / response2);
+        answer = (mynumb.numb / mynumb2.numb);
         break;
     default:
         answer = console.log('Error!');
@@ -65,6 +76,4 @@ if (newAnswer == undefined) {
 };
 console.log('The total is ' +newAnswer +' Clever me!');
 console.log('Thank you for using my calculator!');
-
-
 
